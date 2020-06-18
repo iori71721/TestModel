@@ -17,6 +17,12 @@
                 android:id="@+id/more_camera_preview"
                 android:text="多相機預覽畫面"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratio_camera_preview"
+                android:text="任意尺寸都不失真相機預覽畫面"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

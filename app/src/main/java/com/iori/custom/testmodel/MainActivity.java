@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
             Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE
     };
     private Button more_camera_preview;
+    private Button ratio_camera_preview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,MoreCameraPreview.class));
+            }
+        });
+
+        ratio_camera_preview=findViewById(R.id.ratio_camera_preview);
+        ratio_camera_preview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RatioCameraPreviewActivity.class));
             }
         });
     }
