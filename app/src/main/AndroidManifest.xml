@@ -31,5 +31,7 @@
         <activity android:name=".RatioCameraPreviewActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".LongTextViewActivity"/>
+
     </application>
 </manifest>

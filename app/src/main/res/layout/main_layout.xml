@@ -23,6 +23,12 @@
                 android:id="@+id/ratio_camera_preview"
                 android:text="任意尺寸都不失真相機預覽畫面"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/longTextView"
+                android:text="超長TextView完整顯示"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

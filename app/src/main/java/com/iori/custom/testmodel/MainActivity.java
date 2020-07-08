@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
     };
     private Button more_camera_preview;
     private Button ratio_camera_preview;
+    private Button longTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        Log.d("iori_surface", "onCreate: 3");
+        Log.d("iori_long", "onCreate: 5");
 
         if(!allPermissionsGranted(PERMISSIONS)) {
             ActivityCompat.requestPermissions(this,PERMISSIONS,PERMISSION_REQUEST);
@@ -47,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,RatioCameraPreviewActivity.class));
+            }
+        });
+
+        longTextView=findViewById(R.id.longTextView);
+        longTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LongTextViewActivity.class));
             }
         });
     }
