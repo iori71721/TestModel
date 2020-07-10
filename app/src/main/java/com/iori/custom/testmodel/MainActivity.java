@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.iori.custom.testmodel.lottery.LotteryActivity;
+
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST=99;
     public static final String[] PERMISSIONS = {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button more_camera_preview;
     private Button ratio_camera_preview;
     private Button longTextView;
+    private Button lottery;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LongTextViewActivity.class));
+            }
+        });
+
+        lottery=findViewById(R.id.lottery);
+        lottery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LotteryActivity.class));
             }
         });
     }

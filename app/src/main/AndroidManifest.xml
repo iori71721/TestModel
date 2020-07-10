@@ -32,6 +32,7 @@
             android:screenOrientation="portrait"/>
 
         <activity android:name=".LongTextViewActivity"/>
+        <activity android:name=".lottery.LotteryActivity"/>
 
     </application>
 </manifest>

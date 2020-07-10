@@ -29,6 +29,12 @@
                 android:id="@+id/longTextView"
                 android:text="超長TextView完整顯示"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lottery"
+                android:text="橫向抽獎器"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
