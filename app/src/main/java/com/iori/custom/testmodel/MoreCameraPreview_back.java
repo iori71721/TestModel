@@ -35,6 +35,9 @@ import net.ossrs.rtmp.ConnectCheckerRtmp;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * keep to ask lib owner.
+ */
 public class MoreCameraPreview_back extends AppCompatActivity {
     private static final int PERMISSION_REQUEST = 1;
     private SurfaceView first;

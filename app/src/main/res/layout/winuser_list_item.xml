@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/winUserListItem"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    android:background="@drawable/all_radius_red">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/winUserName"
+            android:layout_marginBottom="10dp"
+            android:text="abcd"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/winUserImage"
+            android:src="@mipmap/ic_launcher" />
+
+</LinearLayout>

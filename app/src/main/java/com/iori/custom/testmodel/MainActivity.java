@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button ratio_camera_preview;
     private Button longTextView;
     private Button lottery;
+    private Button winUserList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LotteryActivity.class));
+            }
+        });
+
+        winUserList=findViewById(R.id.winUserList);
+        winUserList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,WinUserListActivity.class));
             }
         });
     }
