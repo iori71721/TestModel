@@ -24,13 +24,13 @@ public class WinUserListActivity extends AppCompatActivity {
         handler=new Handler();
         winUserLayout=findViewById(R.id.winUserLayout);
 
-        winUserLayout.reloadItems(handler,createData(),4);
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                winUserLayout.clear(handler);
-            }
-        },10000);
+        winUserLayout.reloadItems(handler,createData(),3);
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                winUserLayout.clear(handler);
+//            }
+//        },10000);
     }
 
     private List<WinUserTableLayout.ItemData> createData(){
@@ -39,7 +39,7 @@ public class WinUserListActivity extends AppCompatActivity {
         WinUserTableLayout.ItemData itemData;
         for(int i=0;i<createCount;i++){
             itemData=new WinUserTableLayout.ItemData();
-            itemData.userName="iori"+i;
+            itemData.userName="iori測試直播團"+i;
             if(i%3==0){
                 itemData.userImageResource=R.drawable.user;
             }else if(i%3==1){
