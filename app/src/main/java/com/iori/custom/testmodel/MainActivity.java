@@ -25,14 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private Button longTextView;
     private Button lottery;
     private Button winUserList;
+    private Button fixedHeaderTable;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
-
-        Log.d("iori_long", "onCreate: 5");
-
         if(!allPermissionsGranted(PERMISSIONS)) {
             ActivityCompat.requestPermissions(this,PERMISSIONS,PERMISSION_REQUEST);
         }
@@ -76,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,WinUserListActivity.class));
+            }
+        });
+
+        fixedHeaderTable=findViewById(R.id.fixedHeaderTable);
+        fixedHeaderTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,FixedHeaderTableActivity.class));
             }
         });
     }

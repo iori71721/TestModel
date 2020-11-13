@@ -34,6 +34,7 @@
         <activity android:name=".LongTextViewActivity"/>
         <activity android:name=".lottery.LotteryActivity"/>
         <activity android:name=".WinUserListActivity"/>
+        <activity android:name=".FixedHeaderTableActivity" />
 
     </application>
 </manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="second_column">70dp</dimen>
+    <dimen name="third_column">40dp</dimen>
+    <dimen name="fourth_column">40dp</dimen>
+    <dimen name="header_fixed_width">5dp</dimen>
+</resources>

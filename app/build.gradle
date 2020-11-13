@@ -25,7 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation fileTree(dir: 'libs', include: ['common-1.6.2.aar'])
+    implementation fileTree(dir: 'libs', include: ['common-1.18.0.aar'])
 
     //    rtmp & add button
     implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.7.7'
