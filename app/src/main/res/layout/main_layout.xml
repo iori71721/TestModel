@@ -47,6 +47,12 @@
                 android:id="@+id/fixedHeaderTable"
                 android:text="固定標題與行寬的表格"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_TriangleFilter"
+                android:text="opengl 畫三角形"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

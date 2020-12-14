@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.iori.custom.testmodel.lottery.LotteryActivity;
+import com.iori.custom.testmodel.opengl.OpenglTriangleActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST=99;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button lottery;
     private Button winUserList;
     private Button fixedHeaderTable;
+    private Button opengl_TriangleFilter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,FixedHeaderTableActivity.class));
+            }
+        });
+
+        opengl_TriangleFilter=findViewById(R.id.opengl_TriangleFilter);
+        opengl_TriangleFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, OpenglTriangleActivity.class));
             }
         });
     }
