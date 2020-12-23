@@ -13,21 +13,37 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class OpenglTriangleActivity extends BaseOpenGlActivity {
-
+public class ColorTriangleActivity extends BaseOpenGlActivity{
     private int programId;
     private String vertexShaderCode =
             "precision mediump float;\n" +
                     "attribute vec4 a_Position;\n" +
+                    "attribute vec4 a_Color;\n" +
+                    "varying vec4 v_Color;\n" +
                     "void main() {\n" +
+                    "    v_Color = a_Color;\n" +
                     "    gl_Position = a_Position;\n" +
                     "}";
 
     private String fragmentShaderCode =
             "precision mediump float;\n" +
+                    "varying vec4 v_Color;\n" +
                     "void main() {\n" +
-                    "    gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0);\n" +
+                    "    gl_FragColor = v_Color;\n" +
                     "}";
+
+    private float[] vertexData = new float[]{0f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f};
+
+
+    private float[] colorData = new float[]{
+            1.0f, 0.0f, 0.0f, 1.0f,
+            0.0f, 1.0f, 0.0f, 1.0f,
+            0.0f, 0.0f, 1.0f, 1.0f};
+
+    private int VERTEX_COMPONENT_COUNT = 2;
+
+    private int COLOR_COMPONENT_COUNT = 4;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +53,10 @@ public class OpenglTriangleActivity extends BaseOpenGlActivity {
     private void initGl(){
         glSurfaceView.setEGLConfigChooser(8, 8, 8, 8, 0, 0);
         glSurfaceView.setEGLContextClientVersion(2);
-        glSurfaceView.setRenderer(new SampleHelloWorld());
+        glSurfaceView.setRenderer(new ColorTriangleRender());
     }
 
-    private class SampleHelloWorld implements GLSurfaceView.Renderer{
+    private class ColorTriangleRender implements GLSurfaceView.Renderer{
 
         @Override
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
@@ -68,12 +84,6 @@ public class OpenglTriangleActivity extends BaseOpenGlActivity {
         @Override
         public void onDrawFrame(GL10 gl) {
             GLES20.glUseProgram(programId);
-//            float[] vertexData = new float[]{0f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f};
-
-            float[] vertexData = new float[]{-1f, -1f, 0f, -1f, 1f, 1f};
-
-//            兩個三角形
-//            vertexData=new float[]{-0.5f, 1f, -1f, 0f, 0f, 0f, 0.5f, 0f, 0f, -1f, 1f, -1f};
 
             FloatBuffer buffer = ByteBuffer.allocateDirect(vertexData.length * java.lang.Float.SIZE)
                     .order(ByteOrder.nativeOrder())
@@ -82,13 +92,21 @@ public class OpenglTriangleActivity extends BaseOpenGlActivity {
             buffer.position(0);
 
             int location = GLES20.glGetAttribLocation(programId, "a_Position");
-
             GLES20.glEnableVertexAttribArray(location);
-
             GLES20.glVertexAttribPointer(location, 2, GLES20.GL_FLOAT, false,0, buffer);
 
-            GLES20.glClearColor(0.9f, 0.9f, 0.9f, 1f);
 
+            FloatBuffer colorBuffer=ByteBuffer.allocateDirect(colorData.length*Float.SIZE)
+                    .order(ByteOrder.nativeOrder())
+                    .asFloatBuffer();
+            colorBuffer.put(colorData);
+            colorBuffer.position(0);
+
+            int aColorLocation = GLES20.glGetAttribLocation(programId, "a_Color");
+            GLES20.glEnableVertexAttribArray(aColorLocation);
+            GLES20.glVertexAttribPointer(aColorLocation,COLOR_COMPONENT_COUNT,GLES20.GL_FLOAT,false,0,colorBuffer);
+
+            GLES20.glClearColor(0.9f, 0.9f, 0.9f, 1f);
             GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 
             GLES20.glViewport(0, 0, glSurfaceViewWidth, glSurfaceViewHeight);
@@ -96,7 +114,7 @@ public class OpenglTriangleActivity extends BaseOpenGlActivity {
 //            兩個三角形
 //            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 6);
 
-            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 3);
+            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, vertexData.length/VERTEX_COMPONENT_COUNT);
         }
     }
 }

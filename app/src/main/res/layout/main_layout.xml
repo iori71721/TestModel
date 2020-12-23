@@ -53,6 +53,36 @@
                 android:id="@+id/opengl_TriangleFilter"
                 android:text="opengl 畫三角形"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_translate"
+                android:text="opengl 平移縮放旋轉"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_colorTriangle"
+                android:text="opengl 彩色三角形"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_image"
+                android:text="opengl 渲染圖片"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_frame_buffer"
+                android:text="opengl frame buffer 渲染圖片多種效果"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opengl_frame_buffer_custom"
+                android:text="opengl frame buffer 自行實作 渲染圖片+彩色三角形，後續不需使用frame buffer"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -36,6 +36,12 @@
         <activity android:name=".WinUserListActivity"/>
         <activity android:name=".FixedHeaderTableActivity" />
         <activity android:name=".opengl.OpenglTriangleActivity" />
+        <activity android:name=".opengl.TranslateActivity" />
+        <activity android:name=".opengl.ColorTriangleActivity" />
+        <activity android:name=".opengl.OpenglImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".opengl.OpenglFrameBufferActivity" />
+        <activity android:name=".opengl.CustomOpenglFrameBufferActivity" />
 
     </application>
 </manifest>

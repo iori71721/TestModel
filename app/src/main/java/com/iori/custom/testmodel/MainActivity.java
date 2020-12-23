@@ -14,7 +14,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.iori.custom.testmodel.lottery.LotteryActivity;
+import com.iori.custom.testmodel.opengl.ColorTriangleActivity;
+import com.iori.custom.testmodel.opengl.CustomOpenglFrameBufferActivity;
+import com.iori.custom.testmodel.opengl.OpenglFrameBufferActivity;
+import com.iori.custom.testmodel.opengl.OpenglImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglTriangleActivity;
+import com.iori.custom.testmodel.opengl.TranslateActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST=99;
@@ -28,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     private Button winUserList;
     private Button fixedHeaderTable;
     private Button opengl_TriangleFilter;
+    private Button opengl_translate;
+    private Button opengl_colorTriangle;
+    private Button opengl_image;
+    private Button opengl_frame_buffer;
+    private Button opengl_frame_buffer_custom;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -92,6 +102,46 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, OpenglTriangleActivity.class));
+            }
+        });
+
+        opengl_translate=findViewById(R.id.opengl_translate);
+        opengl_translate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TranslateActivity.class));
+            }
+        });
+
+        opengl_colorTriangle=findViewById(R.id.opengl_colorTriangle);
+        opengl_colorTriangle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ColorTriangleActivity.class));
+            }
+        });
+
+        opengl_image=findViewById(R.id.opengl_image);
+        opengl_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, OpenglImageActivity.class));
+            }
+        });
+
+        opengl_frame_buffer=findViewById(R.id.opengl_frame_buffer);
+        opengl_frame_buffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, OpenglFrameBufferActivity.class));
+            }
+        });
+
+        opengl_frame_buffer_custom=findViewById(R.id.opengl_frame_buffer_custom);
+        opengl_frame_buffer_custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CustomOpenglFrameBufferActivity.class));
             }
         });
     }
