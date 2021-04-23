@@ -42,6 +42,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".opengl.OpenglFrameBufferActivity" />
         <activity android:name=".opengl.CustomOpenglFrameBufferActivity" />
+        <activity android:name=".AnimationActivity" />
 
     </application>
 </manifest>

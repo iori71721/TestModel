@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/frameAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="循環播放" />
+
+                    <Button
+                        android:id="@+id/alphaAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="透明度變更" />
+
+                    <Button
+                        android:id="@+id/scaleAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="縮放" />
+
+                    <Button
+                        android:id="@+id/roateAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="旋轉" />
+
+                    <Button
+                        android:id="@+id/translateAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平移" />
+
+                    <Button
+                        android:id="@+id/combinationAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="組合補間動畫" />
+
+                    <Button
+                        android:id="@+id/inAndOutAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="播放進入與結束動畫" />
+
+                    <Button
+                        android:id="@+id/leftToRightAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="滑進滑出" />
+
+                    <Button
+                        android:id="@+id/propertyAnimation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="property動畫" />
+
+                    <Button
+                        android:id="@+id/valueAnimator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="valueAnimator顯示漸層的效果" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/animationView"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/toggle_on" />
+
+        <ImageSwitcher
+            android:id="@+id/animationSwitcher"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/animationView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/toggle_off"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

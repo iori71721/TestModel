@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Button opengl_image;
     private Button opengl_frame_buffer;
     private Button opengl_frame_buffer_custom;
+    private Button animation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -142,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CustomOpenglFrameBufferActivity.class));
+            }
+        });
+
+        animation=findViewById(R.id.animation);
+        animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
             }
         });
     }
