@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestModel</string>
+    <string name="maps_api_key">AIzaSyDt6txgMf-GPF-hpnHxwqS1lCRNcZPTViI</string>
 </resources>

@@ -89,6 +89,18 @@
                 android:id="@+id/animation"
                 android:text="動畫效果"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/googleMap"
+                android:text="地圖"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentLocation"
+                android:text="地圖在地圖上選取 [目前位置] 和 [顯示詳細資訊]"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

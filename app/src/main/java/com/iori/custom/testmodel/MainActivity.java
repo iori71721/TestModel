@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private Button opengl_frame_buffer;
     private Button opengl_frame_buffer_custom;
     private Button animation;
+    private Button googleMap;
+    private Button currentLocation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -151,6 +153,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+            }
+        });
+
+        googleMap=findViewById(R.id.googleMap);
+        googleMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,GoogleMapActivity.class));
+            }
+        });
+
+        currentLocation=findViewById(R.id.currentLocation);
+        currentLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,CurrentLocationActivity.class));
             }
         });
     }
