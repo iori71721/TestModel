@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button animation;
     private Button googleMap;
     private Button currentLocation;
+    private Button streetMap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -169,6 +170,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,CurrentLocationActivity.class));
+            }
+        });
+
+        streetMap=findViewById(R.id.streetMap);
+        streetMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,StreetMapActivity.class));
             }
         });
     }

@@ -101,6 +101,12 @@
                 android:id="@+id/currentLocation"
                 android:text="地圖在地圖上選取 [目前位置] 和 [顯示詳細資訊]"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/streetMap"
+                android:text="地圖街景服務"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

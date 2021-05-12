@@ -57,6 +57,7 @@
         <activity android:name=".AnimationActivity" />
         <activity android:name=".GoogleMapActivity" />
         <activity android:name=".CurrentLocationActivity" />
+        <activity android:name=".StreetMapActivity" />
 
     </application>
 </manifest>
