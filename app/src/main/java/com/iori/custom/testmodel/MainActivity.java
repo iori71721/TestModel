@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button googleMap;
     private Button currentLocation;
     private Button streetMap;
+    private Button mapMarker;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -178,6 +179,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,StreetMapActivity.class));
+            }
+        });
+
+        mapMarker=findViewById(R.id.mapMarker);
+        mapMarker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MapMarkerActivity.class));
             }
         });
     }

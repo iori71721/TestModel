@@ -107,6 +107,12 @@
                 android:id="@+id/streetMap"
                 android:text="地圖街景服務"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mapMarker"
+                android:text="地圖標記"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

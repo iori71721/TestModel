@@ -58,6 +58,7 @@
         <activity android:name=".GoogleMapActivity" />
         <activity android:name=".CurrentLocationActivity" />
         <activity android:name=".StreetMapActivity" />
+        <activity android:name=".MapMarkerActivity" />
 
     </application>
 </manifest>
