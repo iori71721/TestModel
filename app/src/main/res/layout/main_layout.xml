@@ -74,6 +74,12 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/opengl_long_image"
+                android:text="opengl 渲染圖片 拉伸效果"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/opengl_frame_buffer"
                 android:text="opengl frame buffer 渲染圖片多種效果"/>
 

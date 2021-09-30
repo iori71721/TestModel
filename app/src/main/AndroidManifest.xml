@@ -59,6 +59,7 @@
         <activity android:name=".CurrentLocationActivity" />
         <activity android:name=".StreetMapActivity" />
         <activity android:name=".MapMarkerActivity" />
+        <activity android:name=".opengl.OpenglLongImageActivity" />
 
     </application>
 </manifest>

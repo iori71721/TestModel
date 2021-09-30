@@ -18,6 +18,7 @@ import com.iori.custom.testmodel.opengl.ColorTriangleActivity;
 import com.iori.custom.testmodel.opengl.CustomOpenglFrameBufferActivity;
 import com.iori.custom.testmodel.opengl.OpenglFrameBufferActivity;
 import com.iori.custom.testmodel.opengl.OpenglImageActivity;
+import com.iori.custom.testmodel.opengl.OpenglLongImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglTriangleActivity;
 import com.iori.custom.testmodel.opengl.TranslateActivity;
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private Button currentLocation;
     private Button streetMap;
     private Button mapMarker;
+    private Button opengl_long_image;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -187,6 +189,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,MapMarkerActivity.class));
+            }
+        });
+
+        opengl_long_image=findViewById(R.id.opengl_long_image);
+        opengl_long_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, OpenglLongImageActivity.class));
             }
         });
     }
