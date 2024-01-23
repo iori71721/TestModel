@@ -119,6 +119,18 @@
                 android:id="@+id/mapMarker"
                 android:text="地圖標記"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollDel"
+                android:text="滑動刪除，原生實作失敗"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollDelSwipeRecyclerView"
+                android:text="滑動刪除，套用lib(X)"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private Button streetMap;
     private Button mapMarker;
     private Button opengl_long_image;
+    private Button scrollDel;
+    private Button scrollDelSwipeRecyclerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -197,6 +199,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, OpenglLongImageActivity.class));
+            }
+        });
+
+        scrollDel=findViewById(R.id.scrollDel);
+        scrollDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ScrollDelActivity.class));
+            }
+        });
+
+        scrollDelSwipeRecyclerView=findViewById(R.id.scrollDelSwipeRecyclerView);
+        scrollDelSwipeRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ScrollDelSwipeRecyclerViewActivity.class));
             }
         });
     }

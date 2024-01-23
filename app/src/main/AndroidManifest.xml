@@ -60,6 +60,8 @@
         <activity android:name=".StreetMapActivity" />
         <activity android:name=".MapMarkerActivity" />
         <activity android:name=".opengl.OpenglLongImageActivity" />
+        <activity android:name=".ScrollDelActivity" />
+        <activity android:name=".ScrollDelSwipeRecyclerViewActivity" />
 
     </application>
 </manifest>
