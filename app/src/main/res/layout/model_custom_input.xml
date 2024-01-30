@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/model_singleLineInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/purple_9747FF"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/model_inputHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="直播名稱hint_default"
+                android:textColor="@color/gray_DCDCDC"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/model_inputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/copy_transparent"
+                android:singleLine="true"
+                android:text="t_直播名稱_default"
+                android:textColor="@color/black_353535"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/rightImageLayout"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/rightImageView"
+                android:scaleType="fitCenter"
+                android:src="@drawable/eye"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/model_errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/model_errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abcd"
+            android:textColor="@color/red1"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

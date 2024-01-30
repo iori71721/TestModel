@@ -21,6 +21,7 @@ import com.iori.custom.testmodel.opengl.OpenglImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglLongImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglTriangleActivity;
 import com.iori.custom.testmodel.opengl.TranslateActivity;
+import com.iori.custom.testmodel.ui.CustomInputActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST=99;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private Button opengl_long_image;
     private Button scrollDel;
     private Button scrollDelSwipeRecyclerView;
+    private Button customInput;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -215,6 +217,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ScrollDelSwipeRecyclerViewActivity.class));
+            }
+        });
+
+        customInput=findViewById(R.id.customInput);
+        customInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, CustomInputActivity.class));
             }
         });
     }

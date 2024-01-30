@@ -1,0 +1,12 @@
+<resources>
+
+    <declare-styleable name="CustomInputEditText">
+        <attr name="hint" format="string" />
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textColorHint" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="hintSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -62,6 +62,7 @@
         <activity android:name=".opengl.OpenglLongImageActivity" />
         <activity android:name=".ScrollDelActivity" />
         <activity android:name=".ScrollDelSwipeRecyclerViewActivity" />
+        <activity android:name=".ui.CustomInputActivity" />
 
     </application>
 </manifest>

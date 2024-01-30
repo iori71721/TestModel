@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/triggerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/purple_9747FF"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/leftImageLayout"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/leftImageView"
+                android:scaleType="fitCenter"
+                android:src="@drawable/eye"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/inputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/copy_transparent"
+                android:singleLine="true"
+                android:text="t_直播名稱_default"
+                android:textColor="@color/black_353535"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

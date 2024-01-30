@@ -4,4 +4,7 @@
     <dimen name="third_column">40dp</dimen>
     <dimen name="fourth_column">40dp</dimen>
     <dimen name="header_fixed_width">5dp</dimen>
+    <dimen name="model_stream_broder_radius">5dp</dimen>
+    <dimen name="model_stream_broder_width">1dp</dimen>
+    <dimen name="model_stream_broder_width_3dp">3dp</dimen>
 </resources>

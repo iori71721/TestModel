@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/triggerLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="151dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:background="@color/purple_9747FF" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hintLabel"
+        android:textSize="12sp"
+        android:textColor="@color/gray_8D8E90"
+        android:text="t_直播內容"
+        android:enabled="false"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputEditText"
+        android:layout_weight="1"
+        android:textColor="@color/black_353535"
+        android:hint="t_請輸入直播標題..."
+        android:textColorHint="@color/gray_8D8E90"
+        android:background="@color/copy_transparent"
+        android:gravity="top"/>
+
+</LinearLayout>

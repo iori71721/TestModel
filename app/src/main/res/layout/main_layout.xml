@@ -131,6 +131,12 @@
                 android:id="@+id/scrollDelSwipeRecyclerView"
                 android:text="滑動刪除，套用lib(X)"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customInput"
+                android:text="自定義提示輸入框"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

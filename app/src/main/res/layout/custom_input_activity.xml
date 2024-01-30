@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.iori.custom.testmodel.ui.custom.CustomInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customInput"
+                app:hint="@string/app_name"
+                app:text=""
+                app:textColor="@color/red1"
+                app:textColorHint="@color/green1"
+                app:textSize="16sp"
+                app:hintSize="16sp"
+                android:layout_margin="5dp"
+                android:visibility="visible"/>
+
+            <com.iori.custom.testmodel.ui.custom.CustomInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customInput2"
+                app:hint="@string/app_name"
+                app:text=""
+                app:textColor="@color/red1"
+                app:textColorHint="@color/green1"
+                app:textSize="16sp"
+                app:hintSize="16sp"
+                android:layout_margin="5dp"
+                android:visibility="visible"/>
+
+            <com.iori.custom.testmodel.ui.custom.CustomTextBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTextBox"
+                android:layout_margin="5dp"
+                android:visibility="visible"/>
+
+            <com.iori.custom.testmodel.ui.custom.CustomDropdownTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customDropdownTitle"
+                android:layout_margin="5dp"/>
+
+            <com.iori.custom.testmodel.ui.custom.CustomSearchBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customSearchBar"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user"/>
+
+            <EditText
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
