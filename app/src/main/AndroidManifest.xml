@@ -63,6 +63,7 @@
         <activity android:name=".ScrollDelActivity" />
         <activity android:name=".ScrollDelSwipeRecyclerViewActivity" />
         <activity android:name=".ui.CustomInputActivity" />
+        <activity android:name=".ui.ContentFixListActivity" />
 
     </application>
 </manifest>

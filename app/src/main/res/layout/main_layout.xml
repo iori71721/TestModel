@@ -137,6 +137,12 @@
                 android:id="@+id/customInput"
                 android:text="自定義提示輸入框"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contentFixList"
+                android:text="依據內容自動換行與擴展的list"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

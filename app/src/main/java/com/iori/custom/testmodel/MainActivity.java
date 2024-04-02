@@ -21,6 +21,7 @@ import com.iori.custom.testmodel.opengl.OpenglImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglLongImageActivity;
 import com.iori.custom.testmodel.opengl.OpenglTriangleActivity;
 import com.iori.custom.testmodel.opengl.TranslateActivity;
+import com.iori.custom.testmodel.ui.ContentFixListActivity;
 import com.iori.custom.testmodel.ui.CustomInputActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private Button scrollDel;
     private Button scrollDelSwipeRecyclerView;
     private Button customInput;
+    private Button contentFixList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -227,6 +229,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CustomInputActivity.class));
             }
         });
+
+        contentFixList=findViewById(R.id.contentFixList);
+        contentFixList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ContentFixListActivity.class));
+            }
+        });
+
     }
 
     /**
